@@ -1,16 +1,10 @@
 import React from 'react';
 
-const InputValue = ({setinputHead,inputHead}) => {
-
-    const handleChange = (e) => {
-        setinputHead(e.target.value);
-    }
+const InputValue = ({setInputHead}) => {
 
     return(
         <div>
-             <input type="text" placeholder="Add heading" onChange={(e)=>{setinputHead(e.target.value)}} />
-             <br></br>
-             <p>{inputHead}</p>
+             <input type="text" placeholder="Add heading" onChange={(e) => setInputHead(e.target.value)} />
         </div>
     )
 }

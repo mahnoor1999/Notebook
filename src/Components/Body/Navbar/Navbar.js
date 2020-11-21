@@ -7,8 +7,10 @@ import AddBtn from "./AddBtn/AddBtn";
 import Recipe from "./Recipe/Recipe";
 import BeautyCare from "./BeautyCare/BeautyCare";
 import HealthCare from "./HealthCare/HealthCare";
-import './Navbar.css' //styling sheet
+import "./Navbar.css"; //styling sheet
 const Navbar = () => {
+  const [inputHead, setInputHead] = React.useState("");
+  const [inputContent, setInputContent] = React.useState("");
   return (
     <BrowserRouter>
       <nav className="nav">
@@ -34,11 +36,33 @@ const Navbar = () => {
       </nav>
       <Switch>
         <div className="content">
-          <Route exact path="/" component={Home} />
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Home
+                component={Home}
+                inputHead={inputHead}
+                inputContent={inputContent}
+              />
+            )}
+          />
           <Route exact path="/Recipe" component={Recipe} />
           <Route exact path="/HealthCare" component={HealthCare} />
           <Route exact path="/BeautyCare" component={BeautyCare} />
-          <Route exact path="/AddBtn" component={AddBtn} />
+          <Route
+            exact
+            path="/AddBtn"
+            render={() => (
+              <AddBtn
+                component={AddBtn}
+                setInputHead={setInputHead}
+                inputHead={inputHead}
+                setInputContent={setInputContent}
+                inputContent={inputContent}
+              />
+            )}
+          />
         </div>
       </Switch>
     </BrowserRouter>
