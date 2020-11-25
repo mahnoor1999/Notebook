@@ -1,7 +1,15 @@
-.nav>ul {
+/* .nav>ul {
     display: flex;
     list-style-type: none;
 }
 .nav ul li {
     margin: auto 5px;
+} */
+
+.navbar{
+    background: rgb(190,154,123);
+    width: 100vw;
+}
+.nav-link{
+    color: rgb(60,47,47);
 }
