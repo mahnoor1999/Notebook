@@ -1,17 +1,15 @@
-import React from 'react';
+import React, { useState } from "react";
 
-const RadioBtn = () => {
-
-    return (
-        <div>
-           <input type="radio" id="receipe" name="categories" value="receipe"/>
-            <label htmlFor="receipe">receipe</label>
-            <input type="radio" id="healthcare" name="categories" value="healthcare"/>
-            <label htmlFor="healthcare">healthcare</label>
-            <input type="radio" id="beautycare" name="categories" value="beautycare"/>
-            <label htmlFor="beautycare">beautycare</label>
-        </div>
-                        )
-                        
-}
+const RadioBtn = ({updateRadioValue}) => {
+  return (
+    <div onChange={(e) => updateRadioValue(e.target.value)} className="radio-div">
+      <input type="radio" id="recipe" name="categories" value="recipe" />
+      <label htmlFor="recipe" className="radio-label">Recipe</label>
+      <input type="radio" id="health" name="categories" value="health" />
+      <label htmlFor="health" className="radio-label">Health </label>
+      <input type="radio" id="beauty" name="categories" value="beauty" />
+      <label htmlFor="beauty" className="radio-label">Beauty </label>
+    </div>
+  );
+};
 export default RadioBtn;

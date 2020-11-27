@@ -4,7 +4,7 @@ const InputValue = ({setInputHead}) => {
 
     return(
         <div>
-             <input type="text" placeholder="Add heading" onChange={(e) => setInputHead(e.target.value)} />
+             <input type="text" className="input-value" placeholder="Add Heading" onChange={(e) => setInputHead(e.target.value)} />
         </div>
     )
 }

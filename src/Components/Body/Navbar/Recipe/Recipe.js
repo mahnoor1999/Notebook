@@ -1,7 +1,29 @@
-import React from 'react'
+import React from "react";
+import { useEffect, useState } from "react";
+import firebase from "../../../../firebase";
+
 const Recipe = () => {
-return(
-<h1>Recipe</h1>
-)
-}
-export default Recipe
+  const [recipeList, setrecipeList] = useState([]);
+  useEffect(() => {
+    firebase
+      .database()
+      .ref("recipe")
+      .on("value", (snapshot) => {
+        snapshot.forEach((snap) => {
+          recipeList.push(snap.val());
+        });
+      });
+  }, []);
+
+  let recipeListing = recipeList.map((data) => {
+    return (
+      <>
+        <h1>{data.heading}</h1>
+        <p>{data.content}</p>
+      </>
+    );
+  });
+
+  return <>{recipeListing}</>;
+};
+export default Recipe;
