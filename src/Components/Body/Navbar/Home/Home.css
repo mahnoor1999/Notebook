@@ -1,0 +1,21 @@
+.About-us{
+  background-color: #b47984;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  margin: 100px auto;
+  padding: 50px;
+  font-size: 1.8rem;
+  font-family: "Marck Script", cursive;
+  border-radius: 4px;
+  box-shadow:  rgb(56, 56, 56) 2px 2px;
+}
+.About-us h1, .About-us p{
+    margin: 0px;
+    color: #ffefe1;
+    text-shadow: rgb(75, 74, 74) 2px 2px;
+
+}
+

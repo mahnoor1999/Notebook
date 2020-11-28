@@ -17,10 +17,10 @@ const HealthCare = () => {
   let healthListing = healthList.map((data) => {
     console.log(data);
     return (
-      <>
+      <div className="fetch-content">
         <h1>{data.heading}</h1>
         <p>{data.content}</p>
-      </>
+      </div>
     );
   });
 

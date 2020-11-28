@@ -1,8 +1,8 @@
 form {
   background-color: #b47984;
   width: 75%;
-  margin: 80px auto;
-  padding: 40px;
+  margin: 40px auto;
+  padding: 25px 0px;
   text-align: center;
   border-radius: 10px;
   background-image: linear-gradient(to right, #f19fb0, #b47984, #c25166);
@@ -17,6 +17,8 @@ input[type="text"], textarea{
   width: 85%;
   border: 1px solid #fffafa;
   color: black;
+  
+
 }
 .radio-label {
   color: #fffafa;
@@ -41,8 +43,12 @@ button {
   color: #8a4652;
   background-color: #fff4e6;
   transition: 0.3s;
-  margin-top: 38px;
+  margin-top: 25px;
   border: none;
+  outline: none;
+}
+button:hover{
+  background-color: #961a31;
 }
 ::placeholder {
     color:purple;

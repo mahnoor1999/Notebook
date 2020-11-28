@@ -1,9 +1,10 @@
 import "./App.css";
-import Body from "./Components/Body/Body";
+// import Body from "./Components/Body/Body";
+import Navbar from "./Components/Body/Navbar/Navbar";
 function App() {
   return (
     <div className="App">
-      <Body></Body>
+      <Navbar></Navbar>
     </div>
   );
 }

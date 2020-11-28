@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { withRouter } from "react-router-dom";
+import React from "react";
 import RadioBtn from "./RadioButton/RadioButton";
 import InputValue from "./InputValue/InputValue";
 import InputData from "./InputData/InputData";
@@ -27,7 +26,13 @@ const AddBtn = ({
   // storing in firebase
   function addInFirebase(e) {
     e.preventDefault();
-    if (inputHead === "" || inputContent === "" || radioValue === "") {
+    if (
+      inputHead == null ||
+      inputHead === "" ||
+      inputContent === "" ||
+      inputContent == null ||
+      radioValue === ""
+    ) {
       alert("please fill all the field");
       return false;
     } else {
@@ -55,4 +60,4 @@ const AddBtn = ({
     </form>
   );
 };
-export default withRouter(AddBtn);
+export default AddBtn;
